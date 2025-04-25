@@ -1,0 +1,91 @@
+{
+  "benchmark": {
+    "title": "LLM-RAG Performance Benchmark",
+    "description": "A set of 10 questions to evaluate RAG implementation performance using the machine learning systems PDF",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What are the four classification metrics mentioned in the document?",
+        "expected_answer": "Accuracy, Precision, Recall, and F1-score.",
+        "difficulty": "easy",
+        "type": "fact_retrieval"
+      },
+      {
+        "id": 2,
+        "question": "Explain the relationship between feature engineering and model performance according to the document.",
+        "expected_answer": "The document states that feature engineering transforms raw data into meaningful representations that models can effectively learn from, and that the effectiveness of feature engineering directly impacts model performance, training efficiency, and interpretability. It also notes that in many applications, feature engineering represents the difference between mediocre and exceptional model performance.",
+        "difficulty": "medium",
+        "type": "cross_page_synthesis"
+      },
+      {
+        "id": 3,
+        "question": "What are all the regularization techniques mentioned in the document?",
+        "expected_answer": "L1 regularization (Lasso), L2 regularization (Ridge), Dropout, Early stopping, and Data augmentation.",
+        "difficulty": "medium",
+        "type": "list_extraction"
+      },
+      {
+        "id": 4,
+        "question": "How many deployment architecture patterns are discussed in the document?",
+        "expected_answer": "Three main patterns are discussed: Model Serving Frameworks, Batch vs. Real-time Inference, and Edge Deployment.",
+        "difficulty": "easy",
+        "type": "numerical_data"
+      },
+      {
+        "id": 5,
+        "question": "What does the document suggest about the importance of monitoring in machine learning systems?",
+        "expected_answer": "The document emphasizes that comprehensive monitoring is critical for production ML systems, capturing system health and performance through various metrics. It states that effective monitoring systems not only detect issues but also facilitate root cause analysis and resolution.",
+        "difficulty": "medium",
+        "type": "contextual_understanding"
+      },
+      {
+        "id": 6,
+        "question": "According to the document, how does AutoML relate to the democratization of machine learning?",
+        "expected_answer": "The document states that AutoML technologies democratize machine learning by reducing the expertise required to develop effective models, by automating feature engineering, model architecture search, hyperparameter optimization, and ensemble construction.",
+        "difficulty": "hard",
+        "type": "complex_relationship"
+      },
+      {
+        "id": 7,
+        "question": "What is concept drift as defined in the document, and how is it different from data drift?",
+        "expected_answer": "Concept drift happens when the relationship between features and targets evolves, while data drift occurs when the statistical properties of input features change. The difference is that data drift is about changes in the input distribution, while concept drift involves changes in the underlying relationships/patterns.",
+        "difficulty": "hard",
+        "type": "specific_definition"
+      },
+      {
+        "id": 8,
+        "question": "What challenges does the document identify for deploying models to edge devices, and what benefits does it suggest for this approach?",
+        "expected_answer": "Benefits: reduced latency, enhanced privacy, improved reliability through independence from network connectivity, and lower operational costs. Challenges: requires specialized techniques to optimize models for resource-constrained environments, involving quantization, pruning, or architecture modifications.",
+        "difficulty": "hard",
+        "type": "multi_section_synthesis"
+      },
+      {
+        "id": 9,
+        "question": "Based on the sections about evaluation methodologies, what would the document likely recommend for evaluating a model intended for an imbalanced classification task?",
+        "expected_answer": "The document would likely recommend metrics beyond simple accuracy, particularly precision, recall, and F1-score, which it notes are important for imbalanced datasets. It might also recommend AUC-ROC which 'evaluates performance across classification thresholds' and cross-validation techniques that maintain class distributions.",
+        "difficulty": "hard",
+        "type": "inferential_question"
+      },
+      {
+        "id": 10,
+        "question": "What are the four types of metrics mentioned for evaluating recommendation systems?",
+        "expected_answer": "Hit Rate, Coverage, Diversity, and Serendipity.",
+        "difficulty": "medium",
+        "type": "structured_content_extraction"
+      }
+    ],
+    "evaluation_criteria": {
+      "accuracy": "Correctness of factual information retrieved",
+      "completeness": "Inclusion of all relevant information from source document",
+      "relevance": "Focus on information that directly answers the question",
+      "cross_document_reasoning": "Ability to connect information across different parts of the document",
+      "hallucination_avoidance": "Not including information that isn't present in the source"
+    },
+    "scoring_system": {
+      "0": "Completely incorrect or irrelevant answer",
+      "1": "Partially correct but missing key information",
+      "2": "Mostly correct with minor omissions or inaccuracies",
+      "3": "Fully correct and complete answer"
+    }
+  }
+}
